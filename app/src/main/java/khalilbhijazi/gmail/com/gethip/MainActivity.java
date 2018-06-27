@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        // checking if user is logged in or not
+
         if (mAuth.getCurrentUser() == null) {
             //send user to login activity since he's not logged in
 
