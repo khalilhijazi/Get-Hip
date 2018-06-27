@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Get Hip</string>
+    <string-array name="category_options">
+        <item>Movie</item>
+        <item>Book</item>
+        <item>Game</item>
+        <item>Site</item>
+        <item>Song</item>
+        <item>TV Show</item>
+        <item>Food</item>
+        <item>Sleep</item>
+        <item>Hygiene</item>
+        <item>Travel</item>
+        <item>Work</item>
+        <item>Studying</item>
+    </string-array>
 </resources>

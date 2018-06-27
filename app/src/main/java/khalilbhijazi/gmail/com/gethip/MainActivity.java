@@ -1,8 +1,10 @@
 package khalilbhijazi.gmail.com.gethip;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -10,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
+    private String [] options;
+    private ListView optionsListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+        optionsListView = (ListView) findViewById(R.id.optionsListView);
+        Resources res = getResources();
+
+        options = res.getStringArray(R.array.category_options);
+        OptionsAdapter optionsAdapter = new OptionsAdapter(this, options);
+        optionsListView.setAdapter(optionsAdapter);
     }
 
     @Override
