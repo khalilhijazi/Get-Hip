@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         // checking if user is logged in or not
 
         if (mAuth.getCurrentUser() == null) {
+
             //send user to login activity since he's not logged in
 
             Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
