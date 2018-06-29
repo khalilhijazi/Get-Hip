@@ -41,4 +41,17 @@ public class Movie {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    //returns a boolean value that indicates whether the current movie is equal to the passed in
+    //argument. Two movies are only equal if they share the same fields
+
+    public boolean equals(Object other) {
+        if (!(other instanceof Movie)) {
+            return false;
+        } else {
+            Movie otherMovie = (Movie) other;
+            return this.name.equals(otherMovie.getName()) && this.genre.equals(otherMovie.getGenre());
+        }
+    }
 }
